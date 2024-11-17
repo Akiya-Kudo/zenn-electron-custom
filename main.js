@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, nativeTheme } = require('electron');
 
 app.whenReady().then(() => {
   const win = new BrowserWindow({ 
@@ -139,12 +139,13 @@ app.whenReady().then(() => {
         background: var(--c-button-primary) !important;
       }
     `);
-  });
 
-  // OSテーマ変更時のイベントリスナー not working
-  nativeTheme.on('updated', () => {
-    const isDarkMode = nativeTheme.shouldUseDarkColors;
-    console.log(`テーマが変更されました: ${isDarkMode ? 'ダークモード' : 'ライトモード'}`);
+    // OSテーマ変更時のイベントリスナー not working
+    nativeTheme.on('updated', () => {
+      const isDarkMode = nativeTheme.shouldUseDarkColors;
+      console.log(`テーマが変更されました: ${isDarkMode ? 'ダークモード' : 'ライトモード'}`);
+    });
+
   });
 });
 
