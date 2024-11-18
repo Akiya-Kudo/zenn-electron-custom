@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Zenn
+Comment=Zenn Blog Application
+Exec=/usr/lib/electron32/electron /home/akidoki/.local/share/applications/Zenn
+Icon=~/.local/share/applications/Zenn/zenn.png
+Type=Application
+Terminal=false
+StartupWMClass=Zenn
+Categories=Development;Web;
+MimeType=x-scheme-handler/http;x-scheme-handler/https;
